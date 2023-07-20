@@ -1,0 +1,14 @@
+<form action="" method="POST">
+  {% csrf_token %}
+  <p><strong>Are you sure you want to delete "{{product}}"</strong></p>
+  <a
+    class="btn btn-warning bg-red-500 rounded-xl"
+    href="{{request.META.HTTP_REFERER}}"
+    >Cancel</a
+  >
+  <input
+    class="btn btn-warning bg-red-500 rounded-xl"
+    type="submit"
+    value="Delete"
+  />
+</form>

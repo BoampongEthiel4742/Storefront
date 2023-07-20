@@ -1,0 +1,25 @@
+{% extends 'base/main.html' %} {% block title %}Login{% endblock %}
+<div></div>
+{% block content %}
+
+<div class="w-1/2 my-6 mx-auto p-6 bg-gray-100 rounded-xl">
+  <h1 class="mb-6 text-3xl">Login</h1>
+
+  <form action="" method="POST">
+    {% csrf_token %} {% for field in form %}
+    <div mb-7>
+      <label for="" class="inline-block mb-2">{{ field.label }}:</label>
+      <div></div>
+      {{ field }}
+    </div>
+    {% endfor %}
+
+    <button
+      class="py-4 px-8 text-lg bg-blue-500 hover:bg-blue-700 rounded-xl text-white"
+    >
+      Login
+    </button>
+  </form>
+</div>
+
+{% endblock %}
